@@ -1,0 +1,349 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+body {
+  color: #2a2a2a;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+iframe {
+  width: 100%;
+  vertical-align: bottom;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #2a2a2a;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+/*-------------------------------------------
+共通
+-------------------------------------------*/
+.wrapper {
+  width: 100%;
+  max-width: 1048px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+/* ページタイトル（下層ページ共通） */
+.page-title {
+  max-width: 1048px;
+  line-height: 1;
+  padding: 0 24px;
+  margin: 60px auto 120px auto;
+  position: relative;
+}
+.page-title .en {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+.page-title .ja {
+  display: block;
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+.page-title::before {
+  content: "";
+  width: 1px;
+  height: 80px;
+  background-color: #e60012;
+  position: absolute;
+  top: -96px;
+}
+
+/* メインビジュアル（下層ページ共通） */
+.mv img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+/*-------------------------------------------
+header
+-------------------------------------------*/
+#header {
+  position: relative;
+}
+#header .logo {
+  width: 236px;
+  line-height: 1px;
+  padding: 24px 0 72px 0;
+}
+#header .logo a {
+  display: inline-block;
+}
+#header .menu {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 0 0 96px auto;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+}
+#header .menu li {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 64px;
+}
+#header .menu li:nth-last-child(2) {
+  margin-right: 0;
+}
+#header .menu li img {
+  width: 12px;
+  margin: 8px 0 0 5px;
+}
+#header .menu .active a {
+  color: #e60012;
+  position: relative;
+}
+#header .menu .active a::before {
+  content: "";
+  width: 1px;
+  height: 60px;
+  background-color: #e60012;
+  position: absolute;
+  top: -80px;
+  left: 8px;
+}
+#header .fixed-btn {
+  background-color: #e60012;
+  border-radius: 0 0 0 8px;
+  color: #fff;
+  font-size: 14px;
+  padding: 18px 10px;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer {
+  border-top: solid 1px #e60012;
+  padding: 80px 0 24px 0;
+  margin-top: 120px;
+}
+#footer .inner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+#footer .info {
+  font-size: 14px;
+}
+#footer .info .logo {
+  margin-bottom: 32px;
+}
+#footer .info .tel span:first-of-type {
+  margin-right: 32px;
+}
+#footer .menu {
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+}
+#footer .menu li {
+  font-size: 14px;
+  margin-right: 24px;
+}
+#footer .menu li img {
+  width: 12px;
+  margin: 8px 0 0 5px;
+}
+#footer .menu-left {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-right: 64px;
+}
+#footer .menu-right {
+  display: flex;
+  flex-direction: column-reverse;
+}
+#footer .copyright {
+  font-size: 12px;
+  text-align: center;
+}
+
+/*-------------------------------------------
+sp
+-------------------------------------------*/
+@media screen and (max-width: 767px) {
+  .pc {
+    display: none;
+  }
+
+  /* ページタイトル */
+  .page-title {
+    margin: 40px auto 56px auto;
+  }
+  .page-title .en {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .page-title .ja {
+    font-size: 28px;
+  }
+
+  /* メインビジュアル */
+  .mv img {
+    height: 240px;
+  }
+
+  /*-------------------------------------------
+  header
+  -------------------------------------------*/
+  #header .logo {
+    width: 196px;
+    padding: 24px 0;
+  }
+  #header .fixed-btn {
+    display: none;
+  }
+  #header .hamburger {
+    width: 43px;
+    height: 43px;
+    background-color: #e60012;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    right: 24px;
+    z-index: 30;
+  }
+  #header .hamburger span {
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+    left: 9px;
+  }
+  #header .hamburger span:nth-child(1) {
+    top: 16px;
+  }
+  #header .hamburger span:nth-child(2) {
+    top: 26px;
+  }
+  #header.open .hamburger span:nth-child(1) {
+    top: 21px;
+    background-color: #fff;
+    transform: rotate(-45deg);
+  }
+  #header.open .hamburger span:nth-child(2) {
+    top: 21px;
+    background-color: #fff;
+    transform: rotate(45deg);
+  }
+  #header .menu {
+    width: 70%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    padding: 96px 0 0 64px;
+    transition: all 0.5s;
+    writing-mode: horizontal-tb;
+    -webkit-writing-mode: horizontal-tb;
+    -moz-writing-mode: horizontal-tb;
+    -ms-writing-mode: horizontal-tb;
+    position: fixed;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+    z-index: 20;
+  }
+  #header .menu li {
+    margin: 0 0 24px 0;
+  }
+  #header .menu li img {
+    margin: 0 0 5px 8px;
+  }
+  #header.open .menu {
+    opacity: 1;
+    visibility: visible;
+  }
+  #header .menu .active a {
+    color: #2a2a2a;
+  }
+  #header .menu .active a::before {
+    content: none;
+  }
+  #header .mask {
+    display: none;
+    transition: all 0.5s;
+  }
+  #header.open .mask {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #000;
+    opacity: 0.3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  /*-------------------------------------------
+  footer
+  -------------------------------------------*/
+  #footer {
+    padding: 56px 0 24px 0;
+    margin-top: 56px;
+  }
+  #footer .inner {
+    flex-direction: column-reverse;
+  }
+  #footer .menu {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 40px;
+    writing-mode: horizontal-tb;
+    -webkit-writing-mode: horizontal-tb;
+    -moz-writing-mode: horizontal-tb;
+    -ms-writing-mode: horizontal-tb;
+  }
+  #footer .menu li {
+    margin: 0 0 16px 0;
+  }
+  #footer .menu li img {
+    margin: 0 0 5px 8px;
+  }
+  #footer .menu-left {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  #footer .menu-right {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 768px) {
+  .sp {
+    display: none;
+  }
+}

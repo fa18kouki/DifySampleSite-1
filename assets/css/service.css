@@ -1,0 +1,185 @@
+@charset "UTF-8";
+
+/* ページタイトル */
+.page-title::before {
+  left: 70px;
+}
+
+.content .section-header {
+  margin-bottom: 96px;
+  position: relative;
+}
+.content .section-header .section-title {
+  background-color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  padding: 24px 24px 24px 16px;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  position: absolute;
+  top: 0;
+}
+.content .section-header .title-right {
+  right: 20px;
+}
+.content .section-header .title-left {
+  left: 20px;
+}
+.content .section-header .section-title span {
+  border-right: solid 8px #e60012;
+}
+.content .section-header img {
+  margin-bottom: 48px;
+}
+.content .section-header .text {
+  text-align: justify;
+}
+.content .list-left {
+  display: flex;
+  margin-bottom: 72px;
+}
+.content .list-left li {
+  margin-right: 64px;
+}
+.content .list-right {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 72px;
+}
+.content .list-right li {
+  margin-left: 64px;
+}
+.content .list li {
+  max-width: 360px;
+}
+.content .list li .detail {
+  padding: 24px;
+}
+.content .list li .detail time {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.content .list li .detail .title {
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+.content .list li .detail .text {
+  font-size: 14px;
+}
+
+.contact-area {
+  display: flex;
+  margin-top: 80px;
+}
+.contact-area .title {
+  width: 45%;
+  background-color: #e60012;
+  color: #fff;
+  padding: 80px 10%;
+}
+.contact-area .title .contact-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.contact-area .title p {
+  font-size: 14px;
+}
+.contact-area .contact {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  font-weight: bold;
+  line-height: 1.8;
+  text-align: center;
+}
+.contact-area .contact .tell {
+  width: 50%;
+}
+.contact-area .contact .tell-link {
+  font-size: 30px;
+}
+.contact-area .contact .form {
+  width: 50%;
+  border-left: solid 1px #e60012;
+}
+.contact-area .contact .form-button {
+  background-color: #fff;
+  border: solid 1px #000;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 10px;
+}
+
+/*-------------------------------------------
+sp
+-------------------------------------------*/
+@media screen and (max-width: 767px) {
+  .page-title::before {
+    left: 55px;
+  }
+
+  .content .section-header .section-title {
+    font-size: 18px;
+    padding: 12px 12px 12px 8px
+  }
+  .content .section-header {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+  .content .section-header img {
+    margin-bottom: 32px;
+  }
+  .content .list {
+    padding: 0 24px;
+  }
+  .content .list-left {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .content .list-right {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .content .list li {
+    max-width: 100%;
+    margin: 0 0 40px 0;
+  }
+  .content .list li .detail {
+    padding: 16px 0 0 0;
+  }
+  .content .list li .detail .title {
+    margin-bottom: 8px;
+  }
+
+  .contact-area {
+    flex-direction: column;
+    margin: 40px 0 0 0;
+  }
+  .contact-area .title {
+    width: 100%;
+    padding: 40px 10%;
+  }
+  .contact-area .contact {
+    width: 100%;
+    font-size: 14px;
+    padding: 40px 10px;
+  }
+  .contact-area .contact .tell {
+    padding-right: 10px;
+  }
+  .contact-area .contact .tell-link {
+    font-size: 18px;
+  }
+  .contact-area .contact .tell p,
+  .contact-area .contact .form p {
+    font-size: 12px;
+  }
+  .contact-area .contact .form {
+    padding-left: 10px;
+  }
+}

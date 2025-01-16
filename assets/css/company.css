@@ -1,0 +1,253 @@
+@charset "UTF-8";
+
+/* ページタイトル */
+.page-title::before {
+  left: 80px;
+}
+
+/* セクションタイトル */
+.section-title {
+  border-left: solid 8px #e60012;
+  font-size: 24px;
+  font-weight: bold;
+  padding-left: 16px;
+  margin-bottom: 40px;
+}
+
+.container {
+  display: flex;
+  padding: 0 24px;
+}
+.container .side-menu {
+  width: 20%;
+  min-width: 200px;
+  border-right: solid 1px #2a2a2a;
+  padding-right: 80px;
+}
+.container .side-menu .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: sticky;
+  top: 80px;
+}
+.container .side-menu .menu li {
+  margin-bottom: 24px;
+}
+.container .side-menu .menu a {
+  color: #2a2a2a;
+  opacity: 0.4;
+}
+.container .side-menu .menu .active a {
+  color: #2a2a2a;
+  font-weight: bold;
+  opacity: 1;
+}
+.container .side-menu .menu .active {
+  position: relative;
+}
+.container .side-menu .menu .active::before {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: #e60012;
+  position: absolute;
+  top: 12px;
+  left: -56px;
+}
+.container .main-content {
+  width: 80%;
+  max-width: 760px;
+  padding-left: 80px;
+}
+
+/*-------------------------------------------
+mission
+-------------------------------------------*/
+#mission {
+  margin-bottom: 160px;
+}
+#mission .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+#mission .text {
+  line-height: 1.8;
+  margin-bottom: 24px;
+  text-align: justify;
+}
+
+/*-------------------------------------------
+summary
+-------------------------------------------*/
+#summary {
+  margin-bottom: 160px;
+}
+#summary .list {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: solid 1px #efefef;
+}
+#summary .list dt {
+  width: 20%;
+  border-top: solid 1px #efefef;
+  font-weight: bold;
+  padding: 16px;
+}
+#summary .list dd {
+  width: 80%;
+  border-top: solid 1px #efefef;
+  padding: 16px;
+}
+
+/*-------------------------------------------
+history
+-------------------------------------------*/
+#history {
+  margin-bottom: 160px;
+}
+#history .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+#history .list dt {
+  width: 18%;
+  border-top: solid 1px #2a2a2a;
+  padding: 24px 0;
+  margin-right: 6%;
+}
+#history .list dt:last-of-type {
+  border-bottom: solid 1px #2a2a2a;
+}
+#history .list dd {
+  width: 76%;
+  border-top: solid 1px #efefef;
+  padding: 12px 0;
+}
+#history .list dd:last-of-type {
+  border-bottom: solid 1px #efefef;
+}
+#history .list dd .detail {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+#history .list dd .detail:last-of-type {
+  margin-bottom: 0;
+}
+#history .list dd .detail .month {
+  width: 15%;
+  border-right: solid 1px #efefef;
+  padding: 12px 24px 12px 0;
+}
+#history .list dd .detail .text {
+  width: 85%;
+  padding: 12px 0 12px 24px;
+}
+
+/*-------------------------------------------
+organization
+-------------------------------------------*/
+#organization {
+  margin-bottom: 160px;
+}
+
+/*-------------------------------------------
+access
+-------------------------------------------*/
+#access iframe {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 16px;
+}
+
+/*-------------------------------------------
+sp
+-------------------------------------------*/
+@media screen and (max-width: 767px) {
+  .page-title::before {
+    left: 60px;
+  }
+  .section-title {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+  .container .side-menu {
+    display: none;
+  }
+  .container .main-content {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  /*-------------------------------------------
+  mission
+  -------------------------------------------*/
+  #mission {
+    margin-bottom: 80px;
+  }
+  #mission .title {
+    font-size: 16px;
+  }
+  #mission .text {
+    font-size: 14px;
+  }
+
+  /*-------------------------------------------
+  summary
+  -------------------------------------------*/
+  #summary {
+    margin-bottom: 80px;
+  }
+  #summary .list {
+    font-size: 14px;
+  }
+  #summary .list dt {
+    width: 30%;
+    padding: 8px;
+  }
+  #summary .list dd {
+    width: 70%;
+    padding: 8px;
+  }
+
+  /*-------------------------------------------
+  history
+  -------------------------------------------*/
+  #history {
+    margin-bottom: 80px;
+  }
+  #history .list {
+    font-size: 14px;
+  }
+  #history .list dd .detail .month {
+    width: 20%;
+    padding: 12px 12px 12px 0;
+  }
+  #history .list dd .detail .text {
+    width: 80%;
+    padding: 12px 0 12px 12px;
+  }
+
+  /*-------------------------------------------
+  organization
+  -------------------------------------------*/
+  #organization {
+    margin-bottom: 80px;
+  }
+
+  /*-------------------------------------------
+  access
+  -------------------------------------------*/
+  #access iframe {
+    height: 300px;
+  }
+  #access p {
+    font-size: 14px;
+  }
+}
