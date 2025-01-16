@@ -2,10 +2,6 @@
   background-color: #4d4d4d !important;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
-#dify-chatbot-bubble-button:hover {
-  background-color: #4d4d4d !important;
-  transform: scale(1.1);
-}
 
 /* Speech bubble animation */
 .speech-bubble-container {
