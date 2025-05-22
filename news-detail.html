@@ -10,7 +10,187 @@
     <link rel="stylesheet" href="assets/css/news.css">
     <link rel="shortcut icon" href="assets/images/favicon.ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script>
+      window.difyChatbotConfig = {
+       token: 'DIQ51Hp59gBimzxq',
+       baseUrl: 'https://dify-koukun.jp',
+       systemVariables: {
+         // user_id: 'YOU CAN DEFINE USER ID HERE',
+         // conversation_id: 'YOU CAN DEFINE CONVERSATION ID HERE, IT MUST BE A VALID UUID',
+       },
+       properties: {
+         // チャットボットを必ず表示するよう設定
+         alwaysShow: true,
+         // タイトルを会社名に設定
+         title: '双海工業株式会社問い合わせフロー',
+         // チャットアイコンの設定
+         bubbleIcon: '💬',
+         // メッセージ表示を有効化
+         popupWelcome: {
+           title: 'お問い合わせはこちらから',
+           description: 'なんでも気になることを聞いてください！'
+         }
+       }
+      }
+     </script>
+     <script
+      src="https://dify-koukun.jp/embed.min.js"
+      id="DIQ51Hp59gBimzxq"
+      defer>
+     </script>
+     <style>
+       #dify-chatbot-bubble-button {
+         background-color: #E60012 !important;
+         position: fixed !important;
+         bottom: 20px !important;
+         right: 20px !important;
+         z-index: 9999 !important;
+         transition: background-color 0.3s ease, transform 0.3s ease !important;
+       }
+       #dify-chatbot-bubble-button:hover {
+         transform: scale(1.1) !important;
+       }
+       #dify-chatbot-bubble-window {
+         width: 24rem !important;
+         height: 40rem !important;
+         position: fixed !important;
+         bottom: 80px !important;
+         right: 20px !important;
+         z-index: 9999 !important;
+         border-radius: 16px !important;
+         overflow: hidden !important;
+         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+       }
+       #dify-chatbot-bubble-window .dify-chat-window-header {
+         background-color: #E60012 !important;
+         padding: 15px !important;
+       }
+       #dify-chatbot-bubble-window .dify-chat-send-button {
+         background-color: #E60012 !important;
+         transition: transform 0.2s ease !important;
+       }
+       #dify-chatbot-bubble-window .dify-chat-send-button:hover {
+         transform: scale(1.05) !important;
+       }
+       #dify-chatbot-bubble-window .dify-chat-button {
+         background-color: rgba(230, 0, 18, 0.1) !important;
+         color: #E60012 !important;
+         transition: background-color 0.2s ease !important;
+       }
+       #dify-chatbot-bubble-window .dify-chat-button:hover {
+         background-color: rgba(230, 0, 18, 0.2) !important;
+       }
+       #dify-chatbot-bubble-window .dify-chat-message-bot {
+         background-color: rgba(230, 0, 18, 0.1) !important;
+         border-radius: 12px !important;
+       }
+       #dify-chatbot-bubble-window .dify-chat-message-user {
+         background-color: #E60012 !important;
+         color: white !important;
+         border-radius: 12px !important;
+       }
+       #dify-chatbot-bubble-window .dify-chat-window-title {
+         color: white !important;
+         font-weight: bold !important;
+       }
+       #dify-chatbot-bubble-window .dify-chat-input-field {
+         border: 1px solid #e0e0e0 !important;
+         border-radius: 24px !important;
+         padding: 12px !important;
+         transition: border-color 0.3s ease !important;
+       }
+       #dify-chatbot-bubble-window .dify-chat-input-field:focus {
+         border-color: #E60012 !important;
+         box-shadow: 0 0 0 2px rgba(230, 0, 18, 0.1) !important;
+       }
+       
+       .speech-bubble-container {
+         position: fixed;
+         bottom: 80px;
+         right: 20px;
+         display: none;
+         animation: fadeInOut 5s forwards;
+         z-index: 9998;
+       }
+       
+       .speech-bubble {
+         background: #fff;
+         border: 2px solid #E60012;
+         border-radius: 20px;
+         padding: 15px;
+         max-width: 210px;
+         font-size: 14px;
+         line-height: 1.5;
+         position: relative;
+         color: #333;
+       }
+       
+       .speech-bubble::after {
+         content: "";
+         position: absolute;
+         bottom: 0;
+         right: 30px;
+         width: 20px;
+         height: 20px;
+         background-color: #fff;
+         border-right: 2px solid #E60012;
+         border-bottom: 2px solid #E60012;
+         transform: rotate(45deg) translateY(16px);
+       }
+       
+       @keyframes fadeInOut {
+         0% {
+           opacity: 0;
+           transform: translateY(20px);
+         }
+         10%, 90% {
+           opacity: 1;
+           transform: translateY(0);
+         }
+         100% {
+           opacity: 0;
+           transform: translateY(20px);
+         }
+       }
+       
+       .typewriter {
+         display: block;
+         overflow: hidden;
+         white-space: nowrap;
+         border-right: 2px solid #E60012;
+         animation: typing-line1 2s steps(12, end), blink 0.5s step-end infinite;
+       }
+       
+       .line-2 {
+         display: block;
+         overflow: hidden;
+         white-space: nowrap;
+         opacity: 0;
+         border-right: 2px solid transparent;
+         animation: typing-line2 2s steps(20, end) 2s forwards, blink 0.5s step-end infinite 4s;
+       }
+       
+       @keyframes typing-line1 {
+         from { width: 0; }
+         to { width: 100%; }
+       }
+       
+       @keyframes typing-line2 {
+         from {
+           width: 0;
+           opacity: 1;
+         }
+         to {
+           width: 100%;
+           opacity: 1;
+         }
+       }
+       
+       @keyframes blink {
+         from, to { border-right-color: transparent; }
+         50% { border-right-color: #E60012; }
+       }
+     </style>
   </head>
 
   <body>
